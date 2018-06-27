@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<meta property="og:locale" content="en_US" />
+
+
+<!-- This loads the app on Chrome, Edge, Firefox, and Safari -->
+<!-- Modules are always nonblocking, and they load after regular scripts, so we can put them first -->
+<script type="module" src="/index.js"></script>
+
+<!-- Load polyfills for IE11 -->
+<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
+
+<!-- Webcomponents Polyfill (no-op on browsers that have support) -->
+<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+
+<style>
+  slidem-deck[loading] {
+    display: none;
+  }
+
+  :root {
+    --code: #272822;
+    --blue: #2e9be6;
+  }
+
+  .framework-slide img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  [overlay] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(2.4) translateX(-20%) translateY(-20%);
+  }
+
+  .framework-name {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    padding: 40px;
+    background: var(--blue);
+    color: white;
+    font-size: 200px;
+  }
+
+  @keyframes slide-left {
+    from {
+      transform: translateX(-300%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-top {
+    from {
+      transform: translateY(-800%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-right {
+    from {
+      transform: translateX(300%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-bottom {
+    from {
+      transform: translateY(800%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .quiztitle span {
+    display: block;
+    text-align: center;
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: both;
+  }
+
+  .quiztitle span[left] {
+    animation-name: slide-left;
+    animation-delay: 0.3s;
+  }
+
+  .quiztitle span[top] {
+    animation-name: slide-top;
+  }
+
+  .quiztitle span[right] {
+    animation-name: slide-right;
+    animation-delay: 0.6s;
+  }
+
+  .quiztitle span[bottom] {
+    animation-name: slide-bottom;
+    animation-delay: 0.9s;
+  }
+
+  .quiztitle span[fadein] {
+    transform: rotate(-13deg) translateX(60px);
+    display: inline-block;
+    padding: 40px;
+    background: var(--code);
+    animation-name: fade-in;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+</style>
+
+<!-- Load the app on IE11 -->
+<script nomodule src="index.nomodule.js"></script>
+
+<slidem-deck transition="slide-in slide-out" font="Roboto" loading>
+  <slidem-slide center slide-in slide-out background="--blue">
+    <div center>
+      <h2 font-size="122px" class="quiztitle" line-height="1.2" color="white">
+        <span top>THE GREAT</span>
+        <span left>Frontend</span>
+        <span right>Framework</span>
+        <span bottom>Quiz</span>
+        <span fadein>2018 Edition</span>
+      </h2>
+    </div>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/React.png">
+    <div reveal class="framework-name">React</div>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/jQuery.png">
+    <div reveal class="framework-name">jQuery</div>
+  </slidem-slide>
+  <slidem-slide id="disqualifiedSlide" class="framework-slide" slide-in background="--code">
+    <img src="/images/HTML.png">
+    <div reveal class="framework-name">HTML</div>
+    <video overlay reveal id="disqualified" poster="//i.imgur.com/VXSxAAEh.jpg" preload="auto" muted="muted" loop="loop" webkit-playsinline>
+      <source src="//i.imgur.com/VXSxAAE.mp4" type="video/mp4">
+    </video>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/Angular.png">
+    <div reveal class="framework-name">Angular</div>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/Polymer.png">
+    <div reveal class="framework-name">Polymer</div>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/Svelte.png">
+    <div reveal class="framework-name">Svelte</div>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/Vue.png">
+    <div reveal class="framework-name">Vue</div>
+  </slidem-slide>
+  <slidem-slide class="framework-slide" slide-in background="--code">
+    <img src="/images/Native.png">
+    <div reveal class="framework-name">?</div>
+  </slidem-slide>
+  <slidem-codepen-slide fullscreen pen="MXqzRZ" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide fullscreen pen="XYxWMP" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide fullscreen pen="VdEwGL" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide fullscreen pen="qKJKwK" tabs="js,result"></slidem-codepen-slide>
+</slidem-deck>
+
+<gluon-keybinding id="ToggleDisqualified" key="q"></gluon-keybinding>
+
+<script>
+  // HERE BE DRAGONS
+  const disqualified = document.getElementById('disqualified');
+  const disqualifiedSlide = document.getElementById('disqualifiedSlide');
+  const observer = new MutationObserver(() => {
+    if (disqualifiedSlide.hasAttribute('active') && disqualifiedSlide.step === 3) {
+      disqualified.play();
+    } else {
+      disqualified.pause();
+      disqualified.currentTime = 0;
+    }
+  })
+  observer.observe(disqualifiedSlide, { attributes: true })
+
+</script>
+<span id="browser-sync-binding"></span>
