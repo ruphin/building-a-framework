@@ -24,6 +24,7 @@
   :root {
     --code: #272822;
     --blue: #2e9be6;
+    --codepen: #1B2B34;
   }
 
   .framework-slide img {
@@ -144,6 +145,18 @@
 <script nomodule src="index.nomodule.js"></script>
 
 <slidem-deck transition="slide-in slide-out" font="Roboto" loading>
+
+  <slidem-polymersummit-slide slide-out>
+    <h2 slot="title">Welcome!</h2>
+    <p reveal slot="subtitle">Frameworkless Frontend</p>
+    <img slot="logo" height="200px" width="200px" src="/images/gluon_logo.svg">
+    <img slot="avatar" src="/images/avatar.jpg">
+    <p slot="event">Front End Developers Meetup 2018</p>
+    <p slot="speaker">Goffert van Gool</p>
+    <a slot="email" href="mailto:ruphin@ruphin.net">ruphin@ruphin.net</a>
+    <a slot="twitter" href="https://twitter.com/ruphin_">@ruphin_</a>
+  </slidem-polymersummit-slide>
+
   <slidem-slide center slide-in slide-out background="--blue">
     <div center>
       <h2 font-size="122px" class="quiztitle" line-height="1.2" color="white">
@@ -155,48 +168,112 @@
       </h2>
     </div>
   </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" zoom-out background="--code">
     <img src="/images/React.png">
     <div reveal class="framework-name">React</div>
   </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
     <img src="/images/jQuery.png">
     <div reveal class="framework-name">jQuery</div>
   </slidem-slide>
-  <slidem-slide id="disqualifiedSlide" class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" slide-in zoom-out background="--code" id="disqualifiedSlide">
     <img src="/images/HTML.png">
     <div reveal class="framework-name">HTML</div>
     <video overlay reveal id="disqualified" poster="//i.imgur.com/VXSxAAEh.jpg" preload="auto" muted="muted" loop="loop" webkit-playsinline>
       <source src="//i.imgur.com/VXSxAAE.mp4" type="video/mp4">
     </video>
   </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
     <img src="/images/Angular.png">
     <div reveal class="framework-name">Angular</div>
   </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
     <img src="/images/Polymer.png">
     <div reveal class="framework-name">Polymer</div>
   </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
     <img src="/images/Svelte.png">
     <div reveal class="framework-name">Svelte</div>
   </slidem-slide>
-  <slidem-slide class="framework-slide" slide-in background="--code">
+  <slidem-slide class="framework-slide" slide-in zoom-out background="--code">
     <img src="/images/Vue.png">
     <div reveal class="framework-name">Vue</div>
   </slidem-slide>
   <slidem-slide class="framework-slide" slide-in background="--code">
     <img src="/images/Native.png">
-    <div reveal class="framework-name">?</div>
+    <div reveal class="framework-name">Not a Framework</div>
   </slidem-slide>
-  <slidem-codepen-slide fullscreen pen="MXqzRZ" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide fullscreen pen="XYxWMP" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide fullscreen pen="VdEwGL" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide fullscreen pen="qKJKwK" tabs="js,result"></slidem-codepen-slide>
-</slidem-deck>
 
-<gluon-keybinding id="ToggleDisqualified" key="q"></gluon-keybinding>
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="200px" center line-height="1.2" color="white">But it could be...</h2>
+  </slidem-slide>
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="200px" center line-height="1.2" color="white">So lets build it!</h2>
+  </slidem-slide>
+
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" line-height="1.2" color="white">Framework Features</h2>
+    <ul style="margin-left: 60px; margin-bottom: 160px">
+      <li font-size="92px" line-height="1.4" color="white" reveal>Define Components</li>
+      <li font-size="92px" line-height="1.4" color="white" reveal>Render Templates</li>
+      <!-- <li font-size="92px" line-height="1.4" color="white" reveal>Lifecycle Callbacks</li> -->
+    </ul>
+  </slidem-slide>
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" center line-height="1.2" color="white">Step 1</h2>
+    <p font-size="92px" center line-height="1.8" color="white" style="margin-bottom:100px">Define Components</p>
+  </slidem-slide>
+  <slidem-codepen-slide zoom-out background="--codepen" pen="MXqzRZ" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in background="--codepen" pen="XYxWMP" tabs="js,result"></slidem-codepen-slide>
+
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" center line-height="1.2" color="white">Step 2</h2>
+    <p font-size="92px" center line-height="1.8" color="white">Render Templates</p>
+    <p font-size="92px" reveal center line-height="1.1" color="white">(efficiently)</p>
+  </slidem-slide>
+
+  <slidem-codepen-slide zoom-out background="--codepen" pen="XYxqdw" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="NzOMdM" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="yERjGd" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in background="--codepen" pen="qKJKwK" tabs="js,result"></slidem-codepen-slide>
+
+  <slidem-slide slide-in slide-out background="/images/Hyper-github.png"></slidem-slide>
+  <slidem-slide slide-in slide-out background="/images/Lit-github.png"></slidem-slide>
+
+  <slidem-codepen-slide zoom-out background="--codepen" pen="GGwRxJ" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in background="--codepen" pen="QxJWrg" tabs="js,result"></slidem-codepen-slide>
+
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" center line-height="1.2" color="white" style="margin-bottom:100px">Lets put it together</h2>
+  </slidem-slide>
+
+  <slidem-codepen-slide zoom-out background="--codepen" pen="XYxqdw" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="NzOMdM" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="yERjGd" tabs="js,result"></slidem-codepen-slide>
+  <slidem-codepen-slide slide-in background="--codepen" pen="qKJKwK" tabs="js,result"></slidem-codepen-slide>
+
+
+  <slidem-slide slide-in slide-out center background="white">
+    <div center>
+      <img height="400px" src="/images/gluon_logoType.svg">
+    </div>
+  </slidem-slide>
+
+  <slidem-slide class="framework-slide" background="/images/Gluon.png" style="background-color: var(--code); background-size: contain; background-repeat: no-repeat">
+  </slidem-slide>
+
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" center line-height="1.2" color="white" style="margin-bottom:100px">Is this useful?</h2>
+  </slidem-slide>
+
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" center line-height="1.2" color="white">Thank you!</h2>
+    <p font-size="92px" reveal center line-height="1.8" color="white">ruphin@ruphin.net</p>
+    <p font-size="92px" reveal center line-height="1.1" color="white">
+      <a href="https://github.com/ruphin">https://github.com/ruphin</a>
+    </p>
+  </slidem-slide>
+</slidem-deck>
 
 <script>
   // HERE BE DRAGONS
