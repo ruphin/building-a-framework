@@ -24,4 +24,4 @@ release:
 
 .PHONY: production
 production:
-	docker build -t ruphin/build-a-framework .
+	docker build -t ruphin/building-a-framework .
