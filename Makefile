@@ -23,5 +23,5 @@ release:
 						 -it --rm ruphin/webdev npm run release
 
 .PHONY: production
-production: build
-	docker build -t ruphin/slidem .
+production:
+	docker build -t ruphin/build-a-framework .
