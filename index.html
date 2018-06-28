@@ -8,11 +8,8 @@
 <!-- Modules are always nonblocking, and they load after regular scripts, so we can put them first -->
 <script type="module" src="/index.js"></script>
 
-<!-- Load polyfills for IE11 -->
-<script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
-
 <!-- Webcomponents Polyfill (no-op on browsers that have support) -->
-<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<script src="/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
 
@@ -247,11 +244,7 @@
     <h2 font-size="122px" center line-height="1.2" color="white" style="margin-bottom:100px">Lets put it together</h2>
   </slidem-slide>
 
-  <slidem-codepen-slide zoom-out background="--codepen" pen="XYxqdw" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="NzOMdM" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in zoom-out background="--codepen" pen="yERjGd" tabs="js,result"></slidem-codepen-slide>
-  <slidem-codepen-slide slide-in background="--codepen" pen="qKJKwK" tabs="js,result"></slidem-codepen-slide>
-
+  <slidem-codepen-slide background="--codepen" pen="pKQaPz" tabs="js,result"></slidem-codepen-slide>
 
   <slidem-slide slide-in slide-out center background="white">
     <div center>
@@ -264,6 +257,22 @@
 
   <slidem-slide slide-in slide-out center background="--blue">
     <h2 font-size="122px" center line-height="1.2" color="white" style="margin-bottom:100px">Is this useful?</h2>
+  </slidem-slide>
+
+  <slidem-slide slide-in slide-out center background="--blue">
+    <h2 font-size="122px" center line-height="1.2" color="white">Production Projects</h2>
+    <p font-size="92px" reveal center line-height="1.4" color="white">
+      <a href="https://daiwallet.ruph.in">Daiwallet</a>
+    </p>
+    <p font-size="92px" reveal center line-height="1.4" color="white">
+      <a href="https://slidem.ruph.in">Slidem</a>
+    </p>
+    <p font-size="92px" reveal center line-height="1.4" color="white">
+      <a href="https://overwebs.ruph.in">Overwebs</a>
+    </p>
+    <p font-size="92px" reveal center line-height="1.4" color="white">
+      <a href="https://rik.chipta.com/en/tickets/event/3015/">Chipta Ticket System</a>
+    </p>
   </slidem-slide>
 
   <slidem-slide slide-in slide-out center background="--blue">

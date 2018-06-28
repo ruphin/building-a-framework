@@ -1,16 +1,14 @@
-
-<fruit-list></fruit-list>
+<fruit-list />;
 
 const fruits = ['Apples', 'Oranges', 'Bananas'];
-class FruitList extends HTMLElement {
+class FruitList extends Framework {
   get template() {
     return html`
       <ul>
-        ${ fruits.forEach(fruit => html`<li>${ fruit }</li>`) }
+        ${fruits.map(fruit => html`<li>${fruit}</li>`)}
       </ul>
     `;
   }
 }
 
 customElements.define('fruit-list', FruitList);
-

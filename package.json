@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@gluon/gluon": "^2.4.1",
-    "slidem": "^1.2.3",
+    "@webcomponents/webcomponentsjs": "^2.0.2",
+    "slidem": "^1.2.4",
     "slidem-codepen-slide": "^0.1.0"
   },
   "devDependencies": {

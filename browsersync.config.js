@@ -13,7 +13,7 @@ module.exports = {
     }
   },
   server: {
-    baseDir: ['.']
+    baseDir: ['.', 'node_modules']
   },
   files: ['*.html', '*.js', 'image/*']
 };
