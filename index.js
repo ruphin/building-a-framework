@@ -1,5 +1,5 @@
-import '/node_modules/slidem/slidem-deck.js';
-import '/node_modules/slidem/slidem-slide.js';
-import '/node_modules/slidem/slidem-polymersummit-slide.js';
-import '/node_modules/slidem-codepen-slide/slidem-codepen-slide.js';
-import '/node_modules/@gluon/keybinding/gluon-keybinding.js';
+import 'slidem/slidem-deck.js';
+import 'slidem/slidem-slide.js';
+import 'slidem/slidem-polymersummit-slide.js';
+import 'slidem-codepen-slide/slidem-codepen-slide.js';
+import '@gluon/keybinding/gluon-keybinding.js';

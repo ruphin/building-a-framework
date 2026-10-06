@@ -8,9 +8,6 @@
 <!-- Modules are always nonblocking, and they load after regular scripts, so we can put them first -->
 <script type="module" src="/index.js"></script>
 
-<!-- Webcomponents Polyfill (no-op on browsers that have support) -->
-<script src="/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
 
 <style>
@@ -137,9 +134,6 @@
     animation-timing-function: linear;
   }
 </style>
-
-<!-- Load the app on IE11 -->
-<script nomodule src="index.nomodule.js"></script>
 
 <slidem-deck transition="slide-in slide-out" font="Roboto" loading>
 
@@ -299,4 +293,3 @@
   observer.observe(disqualifiedSlide, { attributes: true })
 
 </script>
-<span id="browser-sync-binding"></span>
